@@ -66,7 +66,7 @@ async def start(bot, update):
                     ),
                     InlineKeyboardButton("Project Channel", url="https://t.me/xTeamBots"),
                 ],
-                [InlineKeyboardButton("Author", url="https://t.me/xgorn")],
+                [InlineKeyboardButton("Author", callback_data="about_data")],
             ]
         ),
         reply_to_message_id=update.message_id
