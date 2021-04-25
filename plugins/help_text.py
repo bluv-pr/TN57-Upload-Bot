@@ -45,7 +45,7 @@ async def help_user(bot, update):
             return
         else:
   
-        await bot.send_message(
+        await update.reply_text(
         chat_id=update.chat.id,
         text=Translation.HELP_USER,
         parse_mode="html",
