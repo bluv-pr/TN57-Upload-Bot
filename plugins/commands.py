@@ -5,14 +5,14 @@
 
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-from script import script
+from translation import Translation
 
 
-@Client.on_message(filters.command(["start"]) & filters.private)
+@Client.on_message(filters.command(["upgrade"]) & filters.private)
 async def start(client, message):
     try:
         await message.reply_text(
-            text=script.START_MSG.format(message.from_user.mention),
+            text=Translation.UPGRADE_TEXT.format(message.from_user.mention),
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
@@ -35,7 +35,7 @@ async def start(client, message):
 async def help(client, message):
     try:
         await message.reply_text(
-            text=script.HELP_MSG,
+            text=Translation.HELP_USER,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
@@ -58,7 +58,7 @@ async def help(client, message):
 async def about(client, message):
     try:
         await message.reply_text(
-            text=script.ABOUT_MSG,
+            text=Translation.ABOUT_TEXT,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
