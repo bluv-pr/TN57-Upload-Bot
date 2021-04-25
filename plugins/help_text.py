@@ -26,7 +26,7 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 from pyrogram.types.bots_and_keyboards import InlineKeyboardButton, InlineKeyboardMarkup
 
 
-@pyrogram.Client.on_message(pyrogram.filters.command(["help"]))
+@pyrogram.Client.on_message(pyrogram.filters.command(["hi"]))
 async def help_user(bot, update):
     # logger.info(update)
     await bot.send_message(
@@ -38,7 +38,7 @@ async def help_user(bot, update):
     )
     
     
-@pyrogram.Client.on_message(pyrogram.filters.command(["about"]))
+@pyrogram.Client.on_message(pyrogram.filters.command(["fcuk"]))
 async def about(bot, update):
     # logger.info(update)
     await bot.send_message(
