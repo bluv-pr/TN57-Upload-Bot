@@ -39,7 +39,7 @@ async def help_user(bot, update):
     
     
     @pyrogram.Client.on_message(pyrogram.filters.command(["about"]))
-async def help_user(bot, update):
+async def about(bot, update):
     # logger.info(update)
     await bot.send_message(
         chat_id=update.chat.id,
