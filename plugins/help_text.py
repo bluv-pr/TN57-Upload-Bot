@@ -45,12 +45,11 @@ async def help_user(bot, update):
             return
         else:
   
-        await update.reply_text(
-        text=Translation.HELP_USER,
-        parse_mode="html",
-        disable_web_page_preview=True,
+        await update.reply_text(Translation.HELP_USER.format(update.from_user.first_name),
+
         reply_to_message_id=update.message_id
     )
+    return
     
     
 @pyrogram.Client.on_message(pyrogram.filters.command(["about"]))
