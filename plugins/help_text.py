@@ -24,12 +24,27 @@ import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 from pyrogram.types.bots_and_keyboards import InlineKeyboardButton, InlineKeyboardMarkup
-
+from pyrogram.errors import UserNotParticipant, UserBannedInChannel
 
 @pyrogram.Client.on_message(pyrogram.filters.command(["help"]))
 async def help_user(bot, update):
-    # logger.info(update)
-    await bot.send_message(
+    update_channel = "https://t.me/TN57_BotZ"
+    if update_channel:
+        try:
+            user = await bot.get_chat_member(update_channel, update.chat.id)
+            if user.status == "kicked":
+               await update.reply_text("<b>Sorry You Are B a n n e d...!!! \n \nContact My Dev 👉 @BluVds To Resolve This Problem</b>")
+               return
+        except UserNotParticipant:
+            await update.reply_text(
+                text="**<b>Oh Dear In Order To Use Me Join My Update Channel 🤭</b>**",
+                reply_markup=InlineKeyboardMarkup([
+                    [ InlineKeyboardButton(text="Join My Updates Channel", url=f"https://t.me/TN57_BotZ")]
+              ])
+            )
+            return
+        else:
+        await bot.send_message(
         chat_id=update.chat.id,
         text=Translation.HELP_USER,
         parse_mode="html",
