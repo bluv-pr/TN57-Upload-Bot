@@ -45,3 +45,4 @@ You can use /rename command after receiving file to rename it with custom thumbn
 <b>🐍Lᴀɴɢᴜᴀɢᴇ :</b> <a href='https://www.python.org'>Pʏᴛʜᴏɴ 3.9.4</a>\n
 <b>😴Dᴇᴠᴇʟᴏᴘᴇʀ :</b> <a href='https://t.me/BLuVDS'>✯ °•Bᴀʟᴀᴊɪ•° ✯</a>\n
 <b>Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ :</b> <a href='https://t.me/TN57_BotzSupport'>Cʟɪᴄᴋ Hᴇʀᴇ</a>\n"""
+    UPGRADE_TEXT = "You Are Already An Vip 👑\nIts Our Free Service.🤗 \n\nSupport Our Channel...@TN57_BotZ 🤓
