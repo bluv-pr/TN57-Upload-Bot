@@ -36,6 +36,20 @@ async def help_user(bot, update):
         disable_web_page_preview=True,
         reply_to_message_id=update.message_id
     )
+    
+    
+    @pyrogram.Client.on_message(pyrogram.filters.command(["about"]))
+async def help_user(bot, update):
+    # logger.info(update)
+    await bot.send_message(
+        chat_id=update.chat.id,
+        text=Translation.ABOUT_TEXT,
+        parse_mode="html",
+        disable_web_page_preview=True,
+        reply_to_message_id=update.message_id
+    )
+  
+
 
 
 @pyrogram.Client.on_message(pyrogram.filters.command(["start"]))
@@ -48,7 +62,7 @@ async def start(bot, update):
             [
                 [
                     InlineKeyboardButton(
-                        "Source", url="https://github.com/X-Gorn/X-URL-Uploader"
+                        "Sourve", url="https://github.com/X-Gorn/X-URL-Uploader"
                     ),
                     InlineKeyboardButton("Project Channel", url="https://t.me/xTeamBots"),
                 ],
